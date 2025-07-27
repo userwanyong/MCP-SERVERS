@@ -1,0 +1,36 @@
+csdn:
+  api:
+    categories:
+    cookie:
+
+spring:
+  application:
+    name: mcp-server-csdn
+
+  ai:
+    mcp:
+      server:
+        stdio: true
+        name: ${spring.application.name}
+        version: 1.0.0
+
+  main:
+    banner-mode: off
+    web-application-type: none
+
+logging:
+  file:
+    name: data/mcp-log/${spring.application.name}.log
+  pattern:
+    console:
+
+#server:
+#  servlet:
+#    encoding:
+#      charset: UTF-8
+#      force: true
+#      enabled: true
+#  port: 8101
+
+
+
