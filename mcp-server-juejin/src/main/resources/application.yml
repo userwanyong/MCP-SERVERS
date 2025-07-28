@@ -6,7 +6,7 @@ juejin:
 
 spring:
   application:
-    name: mcp-server-juejin
+    name: mcp-server-juejin-stdio
 
   ai:
     mcp:

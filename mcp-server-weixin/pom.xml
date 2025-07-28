@@ -9,7 +9,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>mcp-server-weixin</artifactId>
+    <artifactId>mcp-server-weixin-stdio</artifactId>
 
     <dependencies>
         <dependency>
@@ -53,6 +53,7 @@
     </dependencies>
 
     <build>
+        <finalName>mcp-server-weixin-stdio</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

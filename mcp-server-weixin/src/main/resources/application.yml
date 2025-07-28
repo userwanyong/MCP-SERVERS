@@ -1,6 +1,6 @@
 spring:
   application:
-    name: mcp-server-weixin
+    name: mcp-server-weixin-stdio
   ai:
     mcp:
       server:

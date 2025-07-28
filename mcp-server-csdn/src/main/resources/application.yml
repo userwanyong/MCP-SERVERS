@@ -5,7 +5,7 @@ csdn:
 
 spring:
   application:
-    name: mcp-server-csdn
+    name: mcp-server-csdn-stdio
 
   ai:
     mcp:

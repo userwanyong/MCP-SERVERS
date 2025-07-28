@@ -1,6 +1,6 @@
 spring:
   application:
-    name: mcp-server-computer
+    name: mcp-server-computer-stdio
 
   ai:
     mcp:
