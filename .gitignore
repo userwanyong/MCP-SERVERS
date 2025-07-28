@@ -32,3 +32,4 @@ build/
 .vscode/
 **/data/**
 /.local-config
+/docker-compose.yml

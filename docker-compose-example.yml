@@ -1,0 +1,51 @@
+# docker-compose -f docker-compose-example.yml up -d
+version: '3.8'
+services:
+  mcp-server-csdn:
+    image: registry.cn-wulanchabu.aliyuncs.com/wanyj-mcp/mcp-server-csdn:1.0
+    container_name: mcp-server-csdn
+    restart: always
+    ports:
+      - "9001:9001"
+    volumes:
+      - ./log:/data/log
+    environment:
+      - TZ=PRC
+      - SERVER_PORT=9001
+      - CSDN_API_CATEGORIES=Java场景面试宝典
+      - CSDN_API_COOKIE=uuid_tt_dd=xxx
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - my-network
+
+  mcp-server-weixin:
+    image: registry.cn-wulanchabu.aliyuncs.com/wanyj-mcp/mcp-server-weixin:1.0
+    container_name: mcp-server-weixin
+    restart: always
+    ports:
+      - "9004:9004"
+    volumes:
+      - ./log:/data/log
+    environment:
+      - TZ=PRC
+      - SERVER_PORT=9004
+      - WEIXIN_API_ORIGINAL_ID=xxx
+      - WEIXIN_API_APP_ID=xxx
+      - WEIXIN_API_APP_SECRET=xxx
+      - WEIXIN_API_TEMPLATE_ID=xxx
+      - WEIXIN_API_TOUSER=xxx
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
