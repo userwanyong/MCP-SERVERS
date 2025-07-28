@@ -56,9 +56,9 @@ public class McpServerCsdnApplication implements CommandLineRunner {
     public void run(String... args) {
         log.info("check properties ...");
         if (properties.getCookie() == null) {
-            log.error("weixin properties key is null, please set it in application.yml");
+            log.error("csdn properties key is null, please set it in application.yml");
         } else {
-            log.info("weixin properties key cookie:{} categories:{}", properties.getCookie(),properties.getCategories());
+            log.info("csdn properties key cookie:{} categories:{}", properties.getCookie(),properties.getCategories());
         }
     }
 }

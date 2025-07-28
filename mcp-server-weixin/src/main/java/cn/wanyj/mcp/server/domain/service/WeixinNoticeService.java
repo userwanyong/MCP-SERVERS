@@ -20,7 +20,7 @@ public class WeixinNoticeService {
     @Resource
     private IWeixinNoticePort port;
 
-    @Tool(description = "发送消息到微信1")
+    @Tool(description = "发送消息到微信")
     public WeixinNoticeFunctionResponse sendMsg(WeixinNoticeFunctionRequest request) throws IOException {
         log.info("微信消息通知，平台:{} 主题:{} 描述:{} 跳转地址:{}", request.getPlatform(),request.getSubject(),request.getDescription(),request.getJumpUrl());
         return port.sendMsg(request);

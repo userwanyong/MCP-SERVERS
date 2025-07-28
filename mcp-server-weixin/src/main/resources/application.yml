@@ -6,14 +6,13 @@ spring:
       server:
         name: ${spring.application.name}
         version: 1.0.0
-        stdio: true
+        type: SYNC # 同步
+        sse-message-endpoint: /mcp/message  # SSE 消息端点路径
+        sse-endpoint: /sse                  # SSE 端点路径
   main:
     banner-mode: off
-    web-application-type: none
 
 logging:
-  pattern:
-    console:
   file:
     name: data/mcp-log/${spring.application.name}.log
 
@@ -25,3 +24,5 @@ weixin:
     template_id:
     touser:
 
+server:
+  port: 9004
