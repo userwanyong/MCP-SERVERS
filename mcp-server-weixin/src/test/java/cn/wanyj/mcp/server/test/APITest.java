@@ -32,7 +32,7 @@ public class APITest {
 
     @Before
     public void before() throws IOException {
-        Call<WeixinTokenResponseDTO> call = weixinService.getAccessToken("client_credential", weixinApiProperties.getAppid(), weixinApiProperties.getAppsecret());
+        Call<WeixinTokenResponseDTO> call = weixinService.getAccessToken("client_credential", weixinApiProperties.getApp_id(), weixinApiProperties.getApp_secret());
         WeixinTokenResponseDTO weixinTokenResponseDTO = call.execute().body();
         assert weixinTokenResponseDTO != null;
         accessToken = weixinTokenResponseDTO.getAccess_token();

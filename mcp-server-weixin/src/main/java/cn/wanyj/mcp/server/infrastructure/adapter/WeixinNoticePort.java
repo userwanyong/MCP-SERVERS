@@ -37,13 +37,13 @@ public class WeixinNoticePort implements IWeixinNoticePort {
     @Override
     public WeixinNoticeFunctionResponse sendMsg(WeixinNoticeFunctionRequest request) throws IOException {
         // 1. 获取 accessToken
-        String accessToken = weixinAccessToken.getIfPresent(properties.getAppid());
+        String accessToken = weixinAccessToken.getIfPresent(properties.getApp_id());
         if (accessToken==null) {
-            Call<WeixinTokenResponseDTO> call = weixinService.getAccessToken("client_credential", properties.getAppid(), properties.getAppsecret());
+            Call<WeixinTokenResponseDTO> call = weixinService.getAccessToken("client_credential", properties.getApp_id(), properties.getApp_secret());
             WeixinTokenResponseDTO weixinTokenResponseDTO = call.execute().body();
             assert weixinTokenResponseDTO != null;
             accessToken = weixinTokenResponseDTO.getAccess_token();
-            weixinAccessToken.put(properties.getAppid(), accessToken);
+            weixinAccessToken.put(properties.getApp_id(), accessToken);
         }
 
         // 2. 发送模板消息

@@ -20,8 +20,8 @@ logging:
 weixin:
   api:
     original_id:
-    app-id:
-    app-secret:
+    app_id:
+    app_secret:
     template_id:
     touser:
 
