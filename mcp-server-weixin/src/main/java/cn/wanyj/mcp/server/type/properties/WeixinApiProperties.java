@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class WeixinApiProperties {
     private String original_id;
-    private String appid;
-    private String appsecret;
+    private String app_id;
+    private String app_secret;
     private String template_id;
     private String touser;
 }

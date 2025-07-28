@@ -56,10 +56,10 @@ public class McpServerWeixinApplication implements CommandLineRunner {
     @Override
     public void run(String... args) {
         log.info("check properties ...");
-        if (properties.getAppid() == null || properties.getAppsecret() == null || properties.getTouser() == null || properties.getTemplate_id() == null || properties.getOriginal_id() == null) {
+        if (properties.getApp_id() == null || properties.getApp_secret() == null || properties.getTouser() == null || properties.getTemplate_id() == null || properties.getOriginal_id() == null) {
             log.error("weixin properties key is null, please set it in application.yml");
         } else {
-            log.info("weixin properties key appid:{} appsecret:{} template_id:{} touser:{} original_id:{}", properties.getAppid(),properties.getAppsecret(),properties.getTemplate_id(),properties.getTouser(),properties.getOriginal_id());
+            log.info("weixin properties key app_id:{} app_secret:{} template_id:{} touser:{} original_id:{}", properties.getApp_id(),properties.getApp_secret(),properties.getTemplate_id(),properties.getTouser(),properties.getOriginal_id());
         }
     }
 
