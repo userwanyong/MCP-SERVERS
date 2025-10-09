@@ -20,4 +20,8 @@ public class ArticleFunctionResponse {
     @JsonPropertyDescription("msg")
     private String msg;
 
+    @JsonProperty(required = true, value = "url")
+    @JsonPropertyDescription("url")
+    private String url;
+
 }

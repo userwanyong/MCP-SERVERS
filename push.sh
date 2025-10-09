@@ -1,4 +1,5 @@
 #!/bin/bash
+# bash push.sh
 
 # Ensure the script exits if any command fails
 set -e
@@ -6,7 +7,7 @@ set -e
 # Define variables for the registry and image
 ALIYUN_REGISTRY="registry.cn-wulanchabu.aliyuncs.com"
 NAMESPACE="wanyj-mcp"
-IMAGE_NAME="mcp-server-weixin"
+IMAGE_NAME="mcp-server-juejin"
 IMAGE_TAG="1.0"
 
 # 读取本地配置文件
