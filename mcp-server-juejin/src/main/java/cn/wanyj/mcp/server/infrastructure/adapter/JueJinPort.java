@@ -74,6 +74,7 @@ public class JueJinPort implements IJueJinPort {
         if (jueJinPublishResponseBody != null) {
             articleFunctionResponse.setCode(jueJinPublishResponseBody.getErr_no());
             articleFunctionResponse.setMsg(jueJinPublishResponseBody.getErr_msg());
+            articleFunctionResponse.setUrl("https://juejin.cn/post/"+jueJinPublishResponseBody.getData().getArticle_id());
         }
         return articleFunctionResponse;
     }
